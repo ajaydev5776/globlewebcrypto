@@ -1,0 +1,109 @@
+.download_btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out 0s;
+    padding: 0 30px;
+    border: 2px solid $white;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    height: 46px;
+    background-image: -webkit-linear-gradient(-51deg, $theme2, $theme2 99%);
+    background-color: $theme2;
+    border-color: $theme2;
+    transition: all .4s;
+    &::before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 10px;
+        width: 2px;
+        width: 10px;
+        height: 2px;
+        transition: all .4s;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 10px;
+        width: 2px;
+        transition: all .4s;
+    }
+    &.main_btn {
+        transition: all .4s;
+        &::before {
+            background-color: $white;
+            background-image: none;
+            transition: all .4s;
+        }
+        &::after {
+            background-color: $white;
+            background-image: none;
+            transition: all .4s;
+        }
+    }
+    &:hover{
+        background: $white;
+        color: $theme2;
+        border-color: $theme2;
+        &.main_btn {
+            &::after{
+                background-color: $theme1;
+                background-image: -webkit-linear-gradient(-51deg,$theme2,$theme2 99%);
+            }
+            &::before{
+                background-color: $theme1;
+                background-image: -webkit-linear-gradient(-51deg,$theme2,$theme2 99%);
+            }
+        }
+    }
+}
+
+.more_btn {
+    background-image: none !important;
+    background: $white !important;
+    transition: all .4s;
+    &.main_btn {
+        transition: all .4s;
+        &::after{
+            background-color: $theme2 !important;
+            background-image: -webkit-linear-gradient(-51deg,$theme2,$theme2 99%) !important;
+        }
+        &::before{
+            background-color: $theme2 !important;
+            background-image: -webkit-linear-gradient(-51deg,$theme2,$theme2 99%) !important;
+        }
+    }
+    &:hover{
+        color: $white !important;
+        background-image: -webkit-linear-gradient(-51deg, $theme2, $theme2 99%) !important;
+
+        &.main_btn {
+            &::before {
+                background-color: $white !important;
+                background-image: none !important;
+            }
+            &::after {
+                background-color: $white !important;
+                background-image: none !important;
+            }
+        }
+    }
+}
+
+
+
+// --------------------
+@media only screen and (max-width: 350.99px) {
+.download_btn {
+    height: 40px;
+    &.checkBtn {
+        padding: 0 25px;
+    }
+}
+}

@@ -1,0 +1,70 @@
+.typewrite {
+    &.headingS {
+        letter-spacing: 8px;
+    }
+}
+.sideHeading {
+    transform: rotate(90deg);
+    color: rgba($black, 0.8);
+    letter-spacing: 1rem;
+    transform-origin: left top 0;
+    position: relative;
+    left: -15px;
+    top: 30px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        background: $black;
+        width: 40px;
+        height: 1px;
+    }
+}
+
+.sectionheading {
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    &::after{
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 10%;
+        bottom: 0;
+        left: 0;
+        background: $theme2;
+        transition: all ease-in-out 0.3s;
+    }
+    & span{
+        transition: all ease-in-out 0.3s;
+    }
+    &:hover{
+        color: $theme2 !important;
+        & span {
+            color: $black !important;
+        }
+        cursor: pointer;
+        &::after{
+            width: 100%;
+        }
+    }
+    &.breadcrumbHeading  {
+        &:hover{
+            color: $theme2 !important;
+            & span {
+                color: $white !important;
+            }
+            cursor: pointer;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575.99px) {
+    .sideHeading {
+        left: -10px;
+    }
+    
+}

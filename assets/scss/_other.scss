@@ -1,0 +1,882 @@
+@charset "UTF-8";
+
+// *****************About Page****************************
+.OtherPageTopSection {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 9em 0em 0em 0em;
+  & .inner_section {
+    & .breadcrumbBox {
+      & .breadcrumbs {
+        height: 20vh;
+        min-height: 100px;
+      }
+    }
+  }
+  &.AboutTopSection{
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
+  }
+  &.ServicesTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/services/serviceBg.jpg);
+  }
+  &.packagesTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/package/packageBg.jpg);
+  }
+  &.contactTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/package/contectBg.jpg);
+  }
+  &.BlogTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/blogBg.jpg);
+  }
+  &.blogsPageSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/internetUser.jpg);
+  }
+  &.singalPostPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/group.jpg);
+  }
+  &.categoriesPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/Categories_bg.jpg);
+    background-position: bottom;
+  }
+  &.faqSectionPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/faqBg.jpg);
+  }
+  &.disclaimerPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/blog/disclaimerBg.jpg);
+  }
+  &.privacyPolicyPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/privacypolicyBg.jpg);
+  }
+  &.termsConditionPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/termBg.jpg);
+  }
+}
+
+// ****************page-name="gallerySection"**************
+
+  .gallerySection {
+    & .inner_section {
+      & .box-container {
+        & .box {
+          & .galleryMainImage {
+            transition: all ease-in-out 0.3s;
+            & .glightImage {
+            transition: all ease-in-out 0.3s;
+            }
+            & .openImg {
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 0px;
+              height: 0px;
+              background-color: rgba($black, 0.5);
+              opacity: 0;
+              visibility: hidden;
+              transition: all ease-in-out 0.3s;
+              & span {
+                & img {
+                  filter: brightness(100);
+                }
+              }
+            }
+            &:hover{
+              & .openImg {
+                width: 70px;
+                height: 70px;
+                opacity: 1;
+                visibility: visible;
+              }
+              & .glightImage {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+// ******************breadcrumbs***********************
+.breadcrumbs {
+  & nav {
+    & ul {
+      & li {
+        font-weight: 500;
+        &.active {
+          color: $theme1;
+        }
+        & a {
+          position: relative;
+          &::after {
+            content: '/';
+            position: absolute;
+            right: -14px;
+            color: $white;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//*****************Team***************
+.textimonial {
+  & .inner_section {
+    & .teamCard {
+      & .card {
+        & .card-body {
+          overflow: hidden;
+          transition: all ease-in-out 0.3s;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($black, 0.5);
+            visibility: hidden;
+            transition: all ease-in-out 0.3s;
+          }
+          & .icons {
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all ease-in-out 0.3s;
+          }
+          &:hover {
+            &::before {
+              top: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+            & .icons {
+              opacity: 1;
+              transform: translateY(0px);
+              visibility: visible;
+            }
+          }
+        }
+        & .usernameCard {
+          margin-top: -50px;
+          z-index: 1;
+          box-shadow: 0px 0px 10px 0px rgba($black, 0.2);
+          & .username {
+            font-weight: 600;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+// **************Our Vision Section************
+.ourVisionSection {
+  background-image: linear-gradient(90deg, rgba($black, 0.8) 30%, rgba($black, 0.8) 100%), url(../img/about/visionBg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// **********************Services Page**********************
+.serviceWhyChoose {
+  background-image: linear-gradient(90deg, rgba($white, 0.2) 30%, rgba($black, 0.4) 100%), url(../img/about/visionBg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  & .inner_section {
+    & .contentForm{
+      backdrop-filter: blur(50px);
+    }
+  }
+}
+
+// ****************Package Page****************
+.packageClientSection {
+    & .inner_section {
+      & .contentSide {
+        & .accordion {
+          & .accordion-item {
+            & .accordion-header {
+              & .accordion-button {
+                font-weight: 600;
+                border-bottom: 1px solid $theme2 !important;
+                &:not(.collapsed){
+                  background: $white !important;
+                  color: $theme2 !important;
+                  &::after{
+                    // filter: brightness(100);
+                    content: '-';
+                    background-image: none;
+                    transform: none;
+                    font-size: 25px;
+                  }
+                }
+                &::after {
+                  content: '+';
+                    background-image: none;
+                    transform: none;
+                    font-size: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+
+// **********************Contact Us Page******************
+.contactsSection {
+  & .inner_section {
+    & .cardsection {
+      & .card {
+        & .card-body {
+          & .chooseList {
+            height: 100px;
+            width: 100px;
+            z-index: 2;
+            box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
+            transition: all ease-in-out 0.3s;
+            & img {
+              transition: all ease-in-out 0.3s;
+            }
+            &:hover{
+              background-color: $theme2 !important;
+              & img {
+                filter: brightness(100);
+              }
+            }
+          }
+          & .dashBorder {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-bottom: 2px dashed rgba($black, 0.2);
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contactMapSection {
+  & .inner_section {
+    & .contentForm {
+      backdrop-filter: blur(50px);
+    }
+  }
+}
+
+// ****************Blog**************
+.blogSection {
+  & .inner_section {
+    & .singalBlogmainImage{
+      min-height: 250px;
+      & img {
+        object-fit: cover;
+      }
+    }
+    & .blogMainImage {
+      cursor: pointer;
+      transition: all ease-in-out 0.5s;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 1000%;
+        width: 0%;
+        background: rgba($white, 0.2);
+        transition: all ease-in-out 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease-in-out 0.5s;
+      }
+      &:hover{
+        &::before {
+          opacity: 1;
+          left: 100%;
+          width: 100%;
+          visibility: visible;
+        }
+      }
+      &.glightBoxVideo{
+        &::before{
+          inset: 0;
+          width: 100%;
+          background: rgba($black, 0.4);
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+      }
+    }
+    & .leftSide {
+      & .teamCard {
+        & .card {
+          cursor: unset;
+          & .card-body {
+            height: 300px;
+            overflow: hidden;
+            transition: all ease-in-out 0.3s;
+            position: relative;
+            &::before{
+              content: '';
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              height: 100%;
+              width: 100%;
+              background: rgba($black, 0.4);
+              transition: all ease-in-out 0.3s;
+            }
+          }
+          & .icons {
+            right: 20px;
+            top: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all ease-in-out 0.3s;
+            z-index: 3;
+            & .socillinkfooter {
+              z-index: 2;
+              & li {
+                & a {
+                  width: 35px;
+                  height: 35px;
+                }
+              }
+            }
+          }
+          & .innerBody {
+            bottom: 14%;
+            left: 0%;
+            transition: all  ease-in-out 0.3s;
+            
+          }
+          & .readmorebtnPrent {
+            margin: -73px 0px 0px -150px;
+            transition: all  ease-in-out 0.3s;
+            z-index: 2;
+          }
+          & .card-img-top {
+            object-fit: cover;
+          }
+          &:hover {
+            & .icons {
+              opacity: 1;
+              transform: translateY(0px);
+              visibility: visible;
+            }
+            & .readmorebtnPrent {
+              margin: -73px 0px 0px 0px;
+            }
+          }
+          &.active {
+            & .readmorebtnPrent {
+              margin: -73px 0px 0px 0px;
+            }
+            & .icons {
+              visibility: visible;
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      & .singalPostcommunicate {
+        & li {
+          &::marker {
+            color: $theme2 !important;
+            font-size: 18px;
+          }
+        }
+      }
+      & .navTabs {
+        flex-wrap: nowrap;
+        overflow: auto hidden;
+        gap: 15px;
+        & .nav-item {
+          & .nav-link {
+            transition: all 0.3s ease-in-out;
+            border-bottom: 2px solid transparent;
+            &.active {
+              color: $theme2 !important;
+              background: $white;
+              border-color: rgba($black, 0.8);
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+    }
+      ::-webkit-scrollbar {
+        height: 6px;
+        margin: 20px 10px;
+      }
+  
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+  
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: $theme2;
+        border-radius: 10px;
+      }
+  
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: $theme2;
+        cursor: pointer;
+      }
+    }
+    & .rightSideBar {
+      & .sideBarCard {
+        & .card {
+          box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+          & .card-body {
+            & .sideBarheading {
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 20px;
+                height: 2px;
+                background-color: rgba($theme2, 0.8);
+              }
+            }
+            & .input-group {
+              & .form-control {
+                  &:focus-visible{
+                    border-color: $theme1;
+                  }
+                  &::placeholder{
+                    color: rgba($black, 0.3);
+                  }
+                }
+              & .input-group-text {
+                & .searchBtn {
+                  width: 50px;
+                  & img {
+                    filter: brightness(100);
+                  }
+                }
+              }
+            }
+            & .caregorie {
+              & li {
+                border-bottom: 0.6px solid rgba($black, 0.1);
+                & .caregorieLink {
+                  transition: all ease-in-out 0.3s;
+                  &::before {
+                    content: '+';
+                    position: absolute;
+                    left: 0px;
+                    top: 1px;
+                  }
+                  &.active {
+                    color: $theme2 !important;
+                    letter-spacing: 1px;
+                  }
+                  &:hover {
+                    color: $theme2 !important;
+                  }
+                }
+              }
+            }
+            & .userPost {
+              & .userImg {
+                height: 80px;
+                width: 80px;
+                overflow: hidden;
+                transition: all ease-in-out 0.3s;
+                & img {
+                  object-fit: cover;
+                  transition: all ease-in-out 0.3s;
+                }
+                &::before {
+                  content: '';
+                  inset: 0;
+                  position: absolute;
+                  background-color: rgba($black, 0.3);
+                  opacity: 0;
+                  transition: all ease-in-out 0.3s;
+                }
+                &:hover {
+                  & img {
+                    // transform: scale(1.05) rotate(2deg);
+                    transform: scale(1.1);
+                  }
+                  &::before {
+                    opacity: 1;
+                    z-index: 2;
+                  }
+                }
+              }
+              & .postLink {
+                transition: all ease-in-out 0.3s;
+                &:hover {
+                  color: $theme2 !important;
+                }
+              }
+            }
+            & .tagsGroup {
+              & .tagslink {
+                  transition: all ease-in-out 0.3s;
+                  & a {
+                    transition: all ease-in-out 0.3s;
+                  }
+                &:hover {
+                  background-color: $theme2 !important;
+                  & a {
+                    color: $white !important;
+                  }
+                }
+              }
+            }
+            & .contactBlog {
+              & .iconImg {
+                width: 50px;
+              }
+              & .postLink {
+                transition: all ease-in-out 0.3s;
+                &:hover {
+                  color: $theme2 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ***************glightbox***************
+.box-container {
+  & .box {
+    & .inner {
+      & .video_playBtn {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        box-sizing: content-box;
+        display: block;
+        width: 32px;
+        height: 44px;
+        border-radius: 50%;
+        padding: 18px 20px 18px 28px;
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 80px;
+          height: 80px;
+          background: $theme2;
+          border-radius: 50%;
+          animation: pulse-border 1500ms ease-out infinite;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 80px;
+          height: 80px;
+          background: rgba($theme2, 0.8);
+          border-radius: 50%;
+          transition: all 200ms;
+        }
+        &:hover:after {
+          background-color: darken($theme2, 10%);
+        }
+        &  span {
+          display: block;
+          position: relative;
+          z-index: 3;
+          width: 0;
+          height: 0;
+          border-left: 32px solid $white;
+          border-top: 22px solid transparent;
+          border-bottom: 22px solid transparent;
+          & img {
+            position: relative;
+            z-index: 3;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+          }
+        }
+        
+        @keyframes pulse-border {
+          0% {
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// *******************Pagination*******************
+.pagination {
+  & .page-item {
+    & .page-link {
+      color: $black;
+      border: 0px;
+      border-radius: 0px;
+      width: 35px;
+      height: 35px;
+      transition: all ease-in-out 0.3s;
+      &.next {
+        width: auto;
+      }
+      &:hover {
+        background: $theme2;
+        color: $white;
+      }
+    }
+    &.active {
+      & .page-link{
+        color: $white;
+        background: $theme2;
+        border-color: $theme2;
+      }
+    }
+  }
+}
+
+// ************************Blogs Page*********************
+.blogspageSection {
+  & .inner_section {
+    & .teamCard {
+      & .leftSide {
+        & .imagsection {
+            height: 300px;
+          & img {
+            object-fit: cover;
+          }
+        }
+        & .lisumcard {
+          box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+        }
+        & .sideBarheading {
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 20px;
+            height: 2px;
+            background-color: rgba($theme2, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ********************FAQ Page*************************
+
+.fagPage {
+  & .inner_section {
+    & .accordion {
+      & .accordion-item {
+        & .accordion-header {
+          & .accordion-button {
+            font-weight: 600;
+            border-bottom: 1px solid $theme2 !important;
+            &:not(.collapsed){
+              background: $white !important;
+              color: $theme2 !important;
+              &::after{
+                // filter: brightness(100);
+                content: '-';
+                background-image: none;
+                transform: none;
+                font-size: 25px;
+              }
+            }
+            &::after {
+              content: '+';
+                background-image: none;
+                transform: none;
+                font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ******************Disclaimer Page***********
+.disclaimerPageSection {
+  & .inner_section {
+    & ul {
+      & li {
+        &::marker {
+          color: $theme2 !important;
+          font-size: 18px;
+        }
+      }
+    }
+    & .disclaimerCaseImg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+// ************************Privacy Policy****************
+.policysAndTremPage {
+  & .inner_section{
+    & .card {
+      box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+      background-color: rgba($theme1, 0.08);
+    }
+    & ul {
+      & > li {
+        &::marker {
+          color: $theme2;
+          font-size: 18px;
+        }
+        & ol {
+          & li {
+            &::marker {
+              color: $theme2;
+              font-size: 100%;
+            }
+          }
+        }
+      }
+    }
+}
+}
+
+// ******************404 Error**************
+.error404Page {
+  // height: calc(100vh - 10px);
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/404.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    & .inner_section{
+      & .errorNumber {
+        font-size: 150px;
+      }
+    }
+  
+}
+
+
+// -------------------Responsive---------------------
+@media only screen and (max-width: 767.99px) {
+  [page-name="gallerySection"] {
+    &.gallerySection {
+      & .inner_section {
+        & .box-container {
+          & .box {
+            & .galleryMainImage {
+              &:hover{
+                & .openImg {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .disclaimerPageSection {
+    & .inner_section {
+      & .disclaimerCaseImg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  .error404Page {
+      & .inner_section{
+        & .errorNumber {
+          font-size: 100px;
+        }
+      }
+    
+  }
+}
+@media only screen and (max-width: 575.99px) {
+  .contactsSection {
+    & .inner_section {
+      & .cardsection {
+        & .card {
+          & .card-body {
+            & .chooseList {
+              height: 90px;
+              width: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+// .blogSection {
+//   & .inner_section {
+//     & .rightSideBar  {
+//       & .sideBarCard {
+//         & .card {
+//           & .card-body{
+//             & .userPost {
+//               & .postLink {
+//                 font-size: 13px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+  .disclaimerPageSection {
+    & .inner_section {
+      & .disclaimerCaseImg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
