@@ -116,6 +116,7 @@
     background:  rgba($black, 0.7) !important;
     transition: all 1s !important;
     transition: all 0.3s ease-in-out;
+    position: relative;
     & .icone_list {
         & img {
             filter: brightness(100);

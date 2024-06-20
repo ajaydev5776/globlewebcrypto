@@ -105,19 +105,34 @@ if (!$(".hero-section").length) {
         })
     })()
     // glightbox
-    if ($("[page-name=blogcategirues]").length) {
-    var lightboxInlineIframe = GLightbox({
-        selector: '.glightbox'
-    });
-}
-if ($("[page-name=blogcategirues]").length) {
-    $('.nav-link, .caregorieLink').click(function () {
-        AOS.init().reload;
-    });
-}
-if ($("[page-name=gallerySection]").length) {
-    var lightboxInlineIframe = GLightbox({
-        selector: '.glightbox1'
-    });
-}
+//     if ($("[page-name=blogcategirues]").length) {
+//     var lightboxInlineIframe = GLightbox({
+//         selector: '.glightbox'
+//     });
+// }
+// if ($("[page-name=blogcategirues]").length) {
+//     $('.nav-link, .caregorieLink').click(function () {
+//         AOS.init().reload;
+//     });
+// }
+// if ($("[page-name=gallerySection]").length) {
+//     var lightboxInlineIframe = GLightbox({
+//         selector: '.glightbox1'
+//     });
+// }
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        // Remove active class from all links
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        
+        // Add active class to the clicked link
+        this.classList.add('active');
+      });
+    });
+  });
