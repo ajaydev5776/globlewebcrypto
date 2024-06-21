@@ -395,8 +395,9 @@
 
 // ********************Responsive****************
 // -----------Hero Section----------
-@media only screen and (min-width: 990px){
+@media only screen and (min-width: 992px){
   .hero-section{
+    height: 100vh;
     & .inner_section{
       & .content {
         & .mainheading {
@@ -414,8 +415,14 @@
     }
   }
 }
+@media only screen and (max-width: 991.98px){
+  .hero-section{
+    padding: 150px 0px 100px;
+    min-height: unset;
+  }
+}
 
-@media only screen and (max-width: 767.99px) {
+@media only screen and (max-width: 767.98px) {
   .cardSection {
     & .card {
       & .card-body{
@@ -437,7 +444,7 @@
     }
   }
 }
-@media only screen and (max-width: 575.99px) {
+@media only screen and (max-width: 575.98px) {
   .hero-section{
     & .inner_section{
       & .content {
