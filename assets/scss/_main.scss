@@ -17,8 +17,11 @@
 body{
   font-family: 'Poppins', sans-serif;
   background-color: rgba($primary, 0.01);
-  overflow: hidden auto;
   line-height: 1.7;
+  height: 100%;
+}
+html, body{
+  overflow: hidden auto;
 }
 
 
