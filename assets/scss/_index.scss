@@ -108,40 +108,6 @@
 }
 
 
-// ***********checkAbility **********************
-.checkAbility {
-  background-image: linear-gradient(90deg, rgba($black, 0.7) 30%, rgba($black, 0.7) 100%), url(../img/index/why-chooseUs.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  & .inner_section {
-    & .checkEligibility {
-      & .input-group {
-        & .form-control {
-          &:focus {
-            border-color: $theme1 !important;
-          }
-          &:focus-visible {
-            outline: none;
-          }
-        }
-        & .input-group-text {
-          & button {
-            border-top-right-radius: 0.375rem;
-            border-bottom-right-radius: 0.375rem;
-            transition: all ease-in-out 0.3s;
-            &:hover{
-              background-color: $theme2 !important;
-              color: $white !important;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
 // ************Why Choose Us*****************
 .whychooseusSection {
   & .inner_section {
@@ -391,6 +357,76 @@
 
 
 
+// ****************Package Page****************
+.packageClientSection {
+  & .inner_section {
+    & .contentSide {
+      & .accordion {
+        & .accordion-item {
+          & .accordion-header {
+            & .accordion-button {
+              font-weight: 600;
+              border-bottom: 1px solid $theme2 !important;
+              &:not(.collapsed){
+                background: $white !important;
+                color: $theme2 !important;
+                &::after{
+                  // filter: brightness(100);
+                  content: '-';
+                  background-image: none;
+                  transform: none;
+                  font-size: 25px;
+                }
+              }
+              &::after {
+                content: '+';
+                  background-image: none;
+                  transform: none;
+                  font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// **********************Contact Us Page******************
+.contactsSection {
+  & .inner_section {
+    & .cardsection {
+      & .card {
+        & .card-body {
+          & .chooseList {
+            height: 100px;
+            width: 100px;
+            z-index: 2;
+            box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
+            transition: all ease-in-out 0.3s;
+            & img {
+              transition: all ease-in-out 0.3s;
+            }
+            &:hover{
+              background-color: $theme2 !important;
+              & img {
+                filter: brightness(100);
+              }
+            }
+          }
+          & .dashBorder {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-bottom: 2px dashed rgba($black, 0.2);
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 // ********************Responsive****************
@@ -404,13 +440,6 @@
           font-size: 55px !important;
           line-height: 100%;
         }
-      }
-    }
-  }
-  .checkAbility {
-    & .inner_section {
-      &  .ability {
-        font-size: 50px !important;
       }
     }
   }
@@ -471,6 +500,20 @@
         & .whychooseSide {
           & .monyIcone {
             height: 40px;
+          }
+        }
+      }
+    }
+  }
+  .contactsSection {
+    & .inner_section {
+      & .cardsection {
+        & .card {
+          & .card-body {
+            & .chooseList {
+              height: 90px;
+              width: 90px;
+            }
           }
         }
       }

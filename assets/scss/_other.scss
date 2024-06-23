@@ -199,76 +199,8 @@
   }
 }
 
-// ****************Package Page****************
-.packageClientSection {
-    & .inner_section {
-      & .contentSide {
-        & .accordion {
-          & .accordion-item {
-            & .accordion-header {
-              & .accordion-button {
-                font-weight: 600;
-                border-bottom: 1px solid $theme2 !important;
-                &:not(.collapsed){
-                  background: $white !important;
-                  color: $theme2 !important;
-                  &::after{
-                    // filter: brightness(100);
-                    content: '-';
-                    background-image: none;
-                    transform: none;
-                    font-size: 25px;
-                  }
-                }
-                &::after {
-                  content: '+';
-                    background-image: none;
-                    transform: none;
-                    font-size: 25px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-}
 
 
-// **********************Contact Us Page******************
-.contactsSection {
-  & .inner_section {
-    & .cardsection {
-      & .card {
-        & .card-body {
-          & .chooseList {
-            height: 100px;
-            width: 100px;
-            z-index: 2;
-            box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
-            transition: all ease-in-out 0.3s;
-            & img {
-              transition: all ease-in-out 0.3s;
-            }
-            &:hover{
-              background-color: $theme2 !important;
-              & img {
-                filter: brightness(100);
-              }
-            }
-          }
-          & .dashBorder {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-bottom: 2px dashed rgba($black, 0.2);
-            z-index: 1;
-          }
-        }
-      }
-    }
-  }
-}
 
 .contactMapSection {
   & .inner_section {
@@ -840,20 +772,6 @@
   }
 }
 @media only screen and (max-width: 575.98px) {
-  .contactsSection {
-    & .inner_section {
-      & .cardsection {
-        & .card {
-          & .card-body {
-            & .chooseList {
-              height: 90px;
-              width: 90px;
-            }
-          }
-        }
-      }
-    }
-  }
 // .blogSection {
 //   & .inner_section {
 //     & .rightSideBar  {
